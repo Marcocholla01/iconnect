@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Asta;
+  src: url(../src/assets/Fonts/Astakhov-First-Simple.ttf);
+}
+@font-face {
+  font-family: Exo;
+  src: url(../src/Assets/Fonts/Exo-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Breez;
+  src: url(../src/Assets/Fonts/BreeSerif-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, "Poppins",
+    "Roboto", "Bree Serif";
+}
+
+.transition {
+  transition-timing-function: ease-out;
+}
+
+.App {
+  text-align: center;
+  font-family: Asta;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+.App p,
+ul,
+li,
+a,
+p {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2px;
+}
+.App h1,
+h2,
+h3,
+h4,
+span {
+  font-family: Exo;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 9px !important;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(3, 57, 193, 0.6) !important;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+.button {
+  padding: 0.9em 2em;
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #0339c1;
+  font-family: Exo;
+  transition: all 1000ms;
+  font-size: 14px;
+  position: relative;
+  margin: 18px 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  gap: 1rem;
+}
+
+.button:hover {
+  color: #ffffff;
+  transform: scale(1.02);
+  outline: none;
+  border: none;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #0339c1;
+  transform: skewX(40deg);
+  z-index: -1;
+  transition: width 500ms;
+  border: none;
+}
+
+.button:hover::before {
+  width: 150%;
+}
+
+/* Scroll Animation */
+.hidden {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateX(-50%);
+  transition: all 880ms;
+}
+.hidden2 {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateX(50%);
+  transition: all 880ms;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
