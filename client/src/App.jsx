@@ -2,11 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./Pages/App/Homepage";
-import  Aboutpage from "./Pages/App/Aboutpage";
-import  Servicespage from "./Pages/App/Servicespage";
-import  Packagespage from "./Pages/App/Packagespage";
-import  FAQpage from "./Pages/App/FAQpage";
-import  Contactpage from "./Pages/App/Contactpage";
+import Aboutpage from "./Pages/App/Aboutpage";
+import Servicespage from "./Pages/App/Servicespage";
+import Packagespage from "./Pages/App/Packagespage";
+import FAQpage from "./Pages/App/FAQpage";
+import Contactpage from "./Pages/App/Contactpage";
+import Loader from "./components/App/Loader/Loader";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        
+      <Loader />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<Aboutpage />} />
