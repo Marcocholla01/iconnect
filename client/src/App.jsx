@@ -1,4 +1,10 @@
 import { useState } from "react";
+import { ToastContainer, Slide } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+// minified version is also included
+// import 'react-toastify/dist/ReactToastify.min.css';
+
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./Pages/App/Homepage";
@@ -15,7 +21,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Loader />
+        <Loader />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<Aboutpage />} />
@@ -25,6 +31,20 @@ function App() {
           <Route path="/contact" element={<Contactpage />} />
         </Routes>
       </BrowserRouter>
+
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Slide}
+      />
     </>
   );
 }

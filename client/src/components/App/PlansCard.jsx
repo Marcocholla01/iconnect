@@ -22,7 +22,7 @@ const PlansCard = ({ data }) => {
             >
               <div
                 key={index}
-                className="border-solid-[2px] border-gray-900 bg-white rounded px-4 shadow items-center py-3 md:mt-0 mt-9 cursor-pointer hover:ease-out duration-300 transition"
+                className="border-solid-[2px] border-gray-900 bg-white rounded px-2 shadow items-center py-3 md:mt-0 mt-9 cursor-pointer hover:ease-out duration-300 transition"
               >
                 <div className="flex-col text-center ">
                   <h3 className="text-blue-700 mt-10">{item.plan}</h3>

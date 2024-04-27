@@ -24,6 +24,11 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, "Poppins",
     "Roboto", "Bree Serif";
 }
+/* Highlight color for selected text 
+::selection {
+  background-color: #03c13c; /* Highlight color
+  color: #fff;  Text color
+} */
 
 .transition {
   transition-timing-function: ease-out;
@@ -39,6 +44,7 @@ body {
 ul,
 li,
 a,
+label,
 p {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.2px;
@@ -48,7 +54,8 @@ h2,
 h3,
 h4,
 span {
-  font-family: "Exo 2";
+  font-family: "Exo";
+  /* font-family: "Exo 2"; */
   letter-spacing: 0.5px;
   word-spacing: 2px;
 }
@@ -127,4 +134,14 @@ span {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+.header-hide {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header-hide {
+    display: flex;
+  }
 }
