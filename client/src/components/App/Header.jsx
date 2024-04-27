@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaCircleUser } from "react-icons/fa6";
+import Logo from "../../assets/images/iconnect_logo_2022.png";
 
 import { Link, NavLink } from "react-router-dom";
 import { navItems } from "../../data/data.jsx";
@@ -68,7 +69,15 @@ const Header = ({ active }) => {
         </div> */}
           <div>
             <NavLink to={`/`} className="no-underline text-blue-700">
-              <h4 className="font-bold text-[20px]">Iconnect</h4>
+              <h4 className="font-bold text-[20px]">
+                <img
+                  src={Logo}
+                  alt="Iconnect_logo"
+                  srcset=""
+                  height={50}
+                  width={150}
+                />
+              </h4>
             </NavLink>
           </div>
           <nav className="flex gap-1 items-center">
